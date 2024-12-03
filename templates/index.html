@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanço Anual - Empresa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="number"]:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #2c3e50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Relatório de Balanço Anual</h1>
+    </header>
+
+    <div class="container">
+        <h2>Digite os valores dos trimestres</h2>
+        <form action="/grafico" method="POST">
+            <div class="form-group">
+                <label for="trimestre1">Valor do 1º Trimestre (R$):</label>
+                <input type="number" name="trimestre1" id="trimestre1" required step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="trimestre2">Valor do 2º Trimestre (R$):</label>
+                <input type="number" name="trimestre2" id="trimestre2" required step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="trimestre3">Valor do 3º Trimestre (R$):</label>
+                <input type="number" name="trimestre3" id="trimestre3" required step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="trimestre4">Valor do 4º Trimestre (R$):</label>
+                <input type="number" name="trimestre4" id="trimestre4" required step="0.01">
+            </div>
+            <button type="submit">Gerar Gráfico</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2024 Balanço Anual - Empresa X</p>
+    </footer>
+</body>
+</html>
